@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: edupredict-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    # Crucial for React Router (Single Page Applications) to avoid 404s on page refresh
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_SUPABASE_URL
+        value: "put_your_supabase_url_here" # Update in Render Dashboard after deployment
+      - key: VITE_SUPABASE_ANON_KEY
+        value: "put_your_supabase_anon_key_here" # Update in Render Dashboard
+      - key: VITE_OPENAI_API_KEY
+        value: "put_your_openai_api_key_here" # Required for AI features

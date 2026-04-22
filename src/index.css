@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-50: #f8fafc;
+    --brand-100: #f1f5f9;
+    --brand-200: #e2e8f0;
+    --brand-300: #cbd5e1;
+    --brand-400: #94a3b8;
+    --brand-500: #64748b;
+    --brand-600: #475569;
+    --brand-700: #334155;
+    --brand-800: #1e293b;
+    --brand-900: #0f172a;
+
+    --risk-low: #22c55e;
+    --risk-medium: #f59e0b;
+    --risk-high: #ef4444;
+
+    --surface-50: #f8fafc;
+    --surface-100: #f1f5f9;
+    --surface-default: #ffffff;
+  }
+
+  body {
+    @apply bg-[var(--surface-50)] text-slate-800 antialiased;
+  }
+}
