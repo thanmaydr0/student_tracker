@@ -9,6 +9,8 @@ import ProfileCard from '../components/student/ProfileCard'
 import AttendanceChart from '../components/student/AttendanceChart'
 import MarksTable from '../components/student/MarksTable'
 import PredictionWidget from '../components/student/PredictionWidget'
+import TimetableAnalyzer from '../components/student/TimetableAnalyzer'
+import IATMarksCard from '../components/student/IATMarksCard'
 import { seedDemoData } from '../lib/seedDemo'
 
 import { useStudentProfile } from '../hooks/student/useStudentProfile'
@@ -292,7 +294,12 @@ export default function StudentDashboard() {
           </motion.div>
         </div>
 
-        {/* 4. AI Prediction */}
+        {/* 4. IAT Marks (Read-only) */}
+        <motion.div variants={itemVariants}>
+          <IATMarksCard userId={user?.id} />
+        </motion.div>
+
+        {/* 5. AI Prediction */}
         <motion.div variants={itemVariants}>
           <PredictionWidget 
             data={prediction} 
@@ -302,7 +309,12 @@ export default function StudentDashboard() {
           />
         </motion.div>
 
-        {/* 5. Footer */}
+        {/* 5. Timetable & Calendar AI Analyzer */}
+        <motion.div variants={itemVariants}>
+          <TimetableAnalyzer />
+        </motion.div>
+
+        {/* 6. Footer */}
         <motion.div variants={itemVariants} className="flex justify-center pb-8 pt-2">
            <p className="text-xs text-brand-400 font-medium">Last updated {lastUpdated}</p>
         </motion.div>

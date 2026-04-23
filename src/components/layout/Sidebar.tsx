@@ -7,6 +7,7 @@ import {
   UserCircle,
   Users,
   ClipboardCheck,
+  ClipboardList,
   GraduationCap,
   LogOut,
   X,
@@ -38,6 +39,7 @@ const studentNav: NavItem[] = [
 const mentorNav: NavItem[] = [
   { label: 'Dashboard', path: '/mentor/dashboard', icon: LayoutDashboard },
   { label: 'Attendance Log', path: '/mentor/attendance', icon: ClipboardCheck },
+  { label: 'IAT Marks', path: '/mentor/iat-marks', icon: ClipboardList },
   { label: 'Timetable', path: '/mentor/timetable', icon: Calendar },
   { label: 'Profile', path: '/profile', icon: UserCircle },
 ]

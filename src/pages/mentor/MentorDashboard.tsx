@@ -12,6 +12,7 @@ import { useCohortSummary } from '../../hooks/mentor/useCohortSummary'
 import { Skeleton } from '../../components/ui/Skeleton'
 import { cn } from '../../lib/utils'
 import CohortChatPanel from '../../components/mentor/CohortChatPanel'
+import MenteeLeaderboard from '../../components/mentor/MenteeLeaderboard'
 import MessageComposer from '../../components/mentor/MessageComposer'
 
 // Risk Level specific Badge mapping
@@ -260,6 +261,13 @@ export default function MentorDashboard() {
             </div>
           </motion.div>
         </div>
+
+        {/* Mentee Leaderboard */}
+        <MenteeLeaderboard 
+          cohortData={cohortData} 
+          isLoading={isLoading}
+          onStudentClick={(id) => navigate(`/mentor/student/${id}`)}
+        />
 
         {/* Tab Filters */}
         <div className="flex gap-6 border-b border-slate-200 relative">

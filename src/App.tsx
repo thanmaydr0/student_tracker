@@ -16,6 +16,7 @@ const MentorDashboard = lazy(() => import('./pages/mentor/MentorDashboard'))
 const StudentDetailPage = lazy(() => import('./pages/mentor/StudentDetailPage'))
 const BulkAttendancePage = lazy(() => import('./pages/mentor/BulkAttendancePage'))
 const TimetableManagePage = lazy(() => import('./pages/mentor/TimetableManagePage'))
+const IATMarksPage = lazy(() => import('./pages/mentor/IATMarksPage'))
 const ProfilePage = lazy(() => import('./pages/ProfilePage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
@@ -63,6 +64,7 @@ export default function App() {
                 <Route path="/mentor/student/:id" element={<StudentDetailPage />} />
                 <Route path="/mentor/attendance" element={<BulkAttendancePage />} />
                 <Route path="/mentor/timetable" element={<TimetableManagePage />} />
+                <Route path="/mentor/iat-marks" element={<IATMarksPage />} />
               </Route>
 
               {/* Shared protected routes (any authenticated user) */}
